@@ -1,6 +1,7 @@
 import { ProjectType } from '../typings';
 import { TbExternalLink } from 'react-icons/tb';
 import ProjectDisplay from './ProjectDisplay';
+import Slider from './Slider';
 
 interface Props {
   project: ProjectType;
@@ -53,7 +54,7 @@ function Project({ project, bg_colors }: Props) {
           </a>
         </div>
       </div>
-      <ProjectDisplay image_urls={project.image_urls} />
+      <Slider image_urls={project.image_urls} />
     </div>
   );
 }
