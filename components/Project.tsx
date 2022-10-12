@@ -1,6 +1,5 @@
 import { ProjectType } from '../typings';
 import { TbExternalLink } from 'react-icons/tb';
-import ProjectDisplay from './ProjectDisplay';
 import Slider from './Slider';
 
 interface Props {
@@ -9,9 +8,10 @@ interface Props {
     bg_from: string;
     bg_to: string;
   };
+  order?: 'reverse';
 }
 
-function Project({ project, bg_colors }: Props) {
+function Project({ project, bg_colors, order }: Props) {
   const { bg_from, bg_to } = bg_colors;
 
   return (
@@ -21,7 +21,11 @@ function Project({ project, bg_colors }: Props) {
         background: `linear-gradient(90deg, ${bg_from} 0%, ${bg_to} 100%)`,
       }}
     >
-      <div className="flex flex-col gap-y-2 text-center">
+      <div
+        className={`flex flex-col gap-y-2 text-center ${
+          order === 'reverse' && 'md:order-2'
+        }`}
+      >
         <h2 className="capitalize tracking-wide text-xl font-semibold text-shadow-lg md:text-2xl lg:text-3xl">
           {project.title}
         </h2>
@@ -29,8 +33,11 @@ function Project({ project, bg_colors }: Props) {
           {project.description}
         </p>
         <div className="flex flex-wrap items-center justify-center gap-2">
-          {project.built_with.map((tech) => (
-            <span className="text-xs py-0.5 px-1.5 uppercase border border-white rounded-full">
+          {project.built_with.map((tech, index) => (
+            <span
+              key={index}
+              className="text-xs py-0.5 px-1.5 uppercase border border-white rounded-full"
+            >
               {tech}
             </span>
           ))}

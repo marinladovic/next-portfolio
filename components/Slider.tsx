@@ -1,9 +1,8 @@
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import Image from 'next/image';
 
 interface Props {
   image_urls: string[];
@@ -22,7 +21,13 @@ function Slider({ image_urls }: Props) {
       >
         {image_urls.map((image_url) => (
           <SwiperSlide key={image_url} className="shadow">
-            <img src={image_url} alt="project image" className="rounded-md" />
+            <Image
+              src={image_url}
+              width={1280}
+              height={720}
+              alt="project image"
+              className="rounded-md"
+            />
           </SwiperSlide>
         ))}
       </Swiper>
