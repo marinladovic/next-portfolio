@@ -5,7 +5,15 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+    },
   },
-  plugins: [],
-}
+  plugins: [
+    require('tailwindcss-textshadow'),
+    require('tailwind-scrollbar-hide'),
+  ],
+};
