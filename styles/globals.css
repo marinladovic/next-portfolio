@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply text-[#F7F7FF] bg-[#05010D] font-sans;
   }
@@ -81,7 +85,78 @@
     background-image: linear-gradient(90deg, #642b73 0%, #c6426e 100%);
   }
 
-  .swiper-pagination-bullet-active {
-    background-color: #ffffff !important;
+  .about {
+    @apply text-[#F7F7FF] rounded-lg w-full mx-auto px-8 py-12 md:px-12 lg:p-20 text-shadow-md;
+  }
+
+  .about-bg {
+    background-color: #141e30;
+    background-image: linear-gradient(90deg, #141e30 0%, #243b55 100%);
+  }
+
+  .about h2 {
+    @apply text-3xl lg:text-4xl font-bold text-[#F7F7FF] text-shadow-md;
+  }
+
+  .about p {
+    @apply text-[#F7F7FF] text-shadow-md;
+  }
+
+  .menu__resume {
+    @apply !pt-0;
+  }
+
+  .menu__resume .MuiPaper-root {
+    @apply bg-[#F7F7FF] rounded-lg shadow-lg !w-64 !absolute !right-0 !mt-2;
+  }
+
+  .menu__resume .MuiMenuItem-root {
+    @apply !w-64 !text-left;
+  }
+
+  .menu__header {
+    @apply !pt-0;
+  }
+
+  .menu__header .MuiPaper-root {
+    @apply bg-[#F7F7FF] rounded-lg shadow-lg !w-40 !absolute !right-0 !mt-2;
+  }
+
+  .menu__header .MuiMenuItem-root {
+    @apply !w-40 !flex !justify-center;
+  }
+
+  .hamburger {
+    @apply cursor-pointer !w-[24px] !h-[24px] !p-0 transition duration-200 relative;
+  }
+
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom {
+    @apply absolute !w-[24px] h-[2px] top-0 mt-1 left-1/2 !-translate-x-1/2 bg-[#F7F7FF] rotate-0 transition duration-500;
+  }
+
+  .hamburger-middle {
+    @apply translate-y-[7px];
+  }
+
+  .hamburger-bottom {
+    @apply translate-y-[14px];
+  }
+
+  .openClass {
+    @apply rotate-90;
+  }
+
+  .openClass .hamburger-top {
+    @apply rotate-45 translate-y-[12px] -translate-x-[2px];
+  }
+
+  .openClass .hamburger-middle {
+    @apply hidden;
+  }
+
+  .openClass .hamburger-bottom {
+    @apply -rotate-45 translate-y-[12px] -translate-x-[2px];
   }
 }

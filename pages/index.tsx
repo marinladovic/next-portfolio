@@ -4,6 +4,7 @@ import BestPractices from '../components/BestPractices';
 import Navbar from '../components/Navbar';
 import Technologies from '../components/Technologies';
 import ProjectList from '../components/ProjectList';
+import About from '../components/About';
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
           <BestPractices />
         </section>
         <ProjectList />
+        <About />
       </main>
     </div>
   );

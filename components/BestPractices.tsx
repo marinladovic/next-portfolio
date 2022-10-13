@@ -7,9 +7,9 @@ function BestPractices() {
         </h2>
         <p className="text-sm text-shadow-lg lg:text-base">
           You have{' '}
-          <span className="text-semobold underline">50 milliseconds</span> to
-          make a good first impression on your potential visitors. It only takes
-          that long for users to form an opinion about your website and decide
+          <span className="text-semobold underline">half a second</span> to make
+          a good first impression on your potential visitor. It only takes that
+          long for users to form an opinion about your website and decide
           whether they'll stay or leave.
         </p>
         <p className="text-sm text-shadow-lg lg:text-base">

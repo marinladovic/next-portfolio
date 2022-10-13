@@ -10,14 +10,9 @@ function Banner() {
             Web Developer
           </h2>
         </div>
-        <div className="pt-10">
-          <p className="text-gray-400 text-sm mb-6 md:text-base">
-            Interested in my work, or want to hire me?
-          </p>
-          <div className="flex space-x-2 md:space-x-4">
-            <button className="btn btn__cta">Contact</button>
-            <button className="btn btn__primary">My CV</button>
-          </div>
+        <div className="flex space-x-2 pt-12 md:pt-16 md:space-x-4">
+          <button className="btn btn__cta">Contact</button>
+          <button className="btn btn__primary">My CV</button>
         </div>
       </div>
     </div>

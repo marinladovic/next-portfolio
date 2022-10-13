@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import HeaderMenu from './HeaderMenu';
+import ResumeButton from './ResumeButton';
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,15 +37,16 @@ function Navbar() {
             <a href="#projects">Projects</a>
           </li>
           <li>
-            <a href="#bio">Biography</a>
+            <a href="#aboutme">About Me</a>
           </li>
           <li>
             <a href="#contact">Contact</a>
           </li>
         </ul>
-        <button className="bg-white/10 text-gray-400 px-4 py-1 rounded text-sm hover:bg-white/20 hover:text-white transition duration-300">
-          Resume
-        </button>
+        <div className="flex items-center">
+          <ResumeButton />
+          <HeaderMenu />
+        </div>
       </div>
     </header>
   );
