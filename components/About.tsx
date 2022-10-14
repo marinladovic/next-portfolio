@@ -36,6 +36,7 @@ function About() {
             src="/assets/profile.webp"
             width={750}
             height={750}
+            unoptimized
             className="object-cover rounded-full"
           />
         </div>

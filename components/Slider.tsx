@@ -25,6 +25,7 @@ function Slider({ image_urls }: Props) {
               src={image_url}
               width={1280}
               height={720}
+              unoptimized
               alt="project image"
               className="rounded-md"
             />
